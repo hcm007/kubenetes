@@ -1,0 +1,7 @@
+kube-proxy --master=http://192.168.1.88:8080 \
+           --bind-address=192.168.1.99 \
+           --cluster-cidr=10.254.0.0/16
+
+
+
+
