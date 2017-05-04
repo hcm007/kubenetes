@@ -1,0 +1,8 @@
+docker run \
+ --name=dockbix-agent-xxl \
+ --net=host \
+ --privileged \
+ -v /:/rootfs \
+ -v /var/run:/var/run \
+ -e "ZA_Server=45.79.83.78" \
+ -d monitoringartist/dockbix-agent-xxl-limited:latest

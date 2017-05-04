@@ -1,0 +1,6 @@
+docker run \
+    -d \
+    --name zabbix-db \
+    --env="MARIADB_USER=zabbix" \
+    --env="MARIADB_PASS=zabbix" \
+    monitoringartist/zabbix-db-mariadb
