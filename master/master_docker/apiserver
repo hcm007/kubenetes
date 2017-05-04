@@ -1,0 +1,11 @@
+docker run -d -p 8080:8080 --restart=always \
+                           --name apiserver \
+                           starboychina/kube-apiserver \
+                           --v=2 \
+                           --etcd-servers=http://192.168.1.88:2379,http://192.168.1.99:2379 \
+                           --insecure-bind-address=0.0.0.0 \
+                           --port=8080 \
+                           --kubelet-port=10250 \
+                           --allow-privileged=false \
+                           --service-cluster-ip-range=10.254.0.0/16 \
+                           --admission-control=NamespaceLifecycle,NamespaceExists,LimitRanger,SecurityContextDeny,ResourceQuota

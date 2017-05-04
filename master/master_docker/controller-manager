@@ -1,0 +1,6 @@
+docker run -d --restart=always \
+              --name controllermanager \
+              starboychina/kube-controller-manager \
+             --logtostderr=true \
+             --master=http://192.168.1.88:8080 \
+             --v=2
