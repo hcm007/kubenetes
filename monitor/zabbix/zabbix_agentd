@@ -11,7 +11,7 @@
 
 
 
-docker run --name zabbix-agent1 --link zabbix:zabbix-server --privileged -d zabbix/zabbix-agent:latest
+docker run --name zabbix-agent1 --link zabbix:zabbix-server -v /root:/rootfs --privileged -d zabbix/zabbix-agent:latest
 
 
 
